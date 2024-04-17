@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>MB Plc</title>
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <h1>Log In Your Account</h1>
+            <form action="#" id="formsub">
+                <label>Email:</label>
+                <input type="email"  id="email" placeholder="Insert your email"><br><br>
+
+                <label>Password:</label>
+                <span>
+                    <input type="password"  id="password" placeholder="Insert your password">
+                    <span id="eye" onclick="onTap()" style="cursor: pointer;">Show</span>
+                </span>
+                <br><br>
+
+                <button type="submit" onclick="login()">Log In</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+
+<script>
+    let email =document.getElementById('email')
+    let password =document.getElementById('password')
+    let formsub = document.getElementById('formsub')
+let savedinfo = JSON.parse(localStorage.getItem('all_data')) || [];
+let count = 0;
+
+let isFound;
+console.log(savedinfo);
+function form() {
+    ev.preventDefault()
+
+}
+
+function login(ev) {
+//  ev.preventDefault()
+    console.log('hello');
+    
+    if (!savedinfo || savedinfo.length === 0) {
+        return false; // No saved info, so login fails
+    }
+
+    for (let i = 0; i < savedinfo.length; i++){
+        if (savedinfo[i].email === email.value && savedinfo[i].password === password.value){
+            return true; // Login successful
+        }
+    }
+    return false; // Login failed
+}
+function onTap(){
+        let password=document.getElementById('password')
+        let eye=document.getElementById('eye')
+        if(password.type=='text'){
+            password.type='password'
+        } else{
+            password.type='text'
+        }
+    }
+
+function login(){
+    
+    if(checkLogin()){
+        localStorage.setItem("curUser", JSON.stringify(email.value)) 
+        window.location.href = 'dash.html'
+    } else {
+        alert("Invalid login credentials");
+    }
+}
+    </script>

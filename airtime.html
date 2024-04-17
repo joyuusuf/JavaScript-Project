@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="airtime.css">
+    <title>MB plc Home Page</title>
+</head>
+<body>
+    <div id="upperpart">
+        <img src="Mide_Bank_PLC_transparent-removebg-preview.png" style="height: 120px; width: 110px;">
+        <!-- <img src="atmsilver.jpg" alt=""> -->
+        <div id="container">
+        
+            <h1>Welcome!</h1>
+            <h4>Enjoy a glitch free banking network. Recharge here! </h4>
+            <p>Available balance: <span id="balance"> 12000 </span></p> <br><br><br>
+            <!-- <button onclick="withdraw()">Withdraw Money</button> -->
+            <!-- <button onclick="transfer()">Transfer Money</button> -->
+        </div>
+    </div>
+   
+      
+    <div id="rechargeopt">
+        <select name="" id="network">
+            <option>Select Your Preferred Network</option>
+            <option value="MTN">MTN</option>
+            <option value="Airtel">Airtel</option>
+            <option value="GLO">GLO</option>
+            <option value="9Mobile">9Mobile</option>
+        </select>
+        <select name="" id="amount">
+            <option id="airtimeamount">Select amount</option>
+            <option value="100">₦100</option>
+            <option value="200">₦200</option>
+            <option value="500">₦500</option>
+            <option value="1000">₦1000</option>
+            <option value="12000">₦12000</option>
+            <option value="20000">₦20000</option>
+        </select> <br> <br>
+    </div>
+
+
+        <input type="text" id="phoneNumber" placeholder="Your Phone Number Here">
+        <button onclick="loadAirtime()">Load Airtime</button>
+        
+
+        <table>
+            <thead>
+               <tr>
+                <td>S/N</td>
+                <td>Network</td>
+                <td>Amount</td>
+                <td>Transaction Id</td>
+                <td>Phone Number</td>
+               </tr>
+            </thead>
+            <tbody id="display"></tbody>
+         </table>
+     
+      
+</body>
+</html>
+
+
+<script>
+    let balance=document.getElementById('balance')
+    let currentBalance= 12000
+     let network =document.getElementById('network')
+     let amount = document.getElementById('amount')
+    let airtimeamount=document.getElementById('airtimeamount')
+    let pin =document.getElementById('pin')
+    let display=document.getElementById('display')
+    let phoneNumber=document.getElementById('phoneNumber')
+    let numbertogether = ''
+    let arraydata =[]
+    let count=1
+
+function updateBalance() {
+    balance.innerHTML=`${currentBalance}`
+    currentBalance -= airtimeamount;
+}
+
+    function displaydata() {
+        
+        display.innerHTML+=`
+        <tbody>
+            <tr>
+                <td>${count}</td>
+                <td>${network.value}</td>
+                <td>${amount.value}</td>
+                <td>${numbertogether}</td>
+                <td>${phoneNumber.value}</td>
+            </tr>
+        </tbody>
+        `
+        count++
+    }
+
+    function loadAirtime() {
+        // currentBalance = currentBalance - amount;
+        for (let index = 0; index < 16; index++) {
+            let generatednumber = Math.floor(Math.random()*10)
+            numbertogether = numbertogether + generatednumber
+        }
+        displaydata()
+        let data = {
+            network: network.value,
+            amount: amount.value,
+            pin: numbertogether,
+            phoneNumber:phoneNumber.value
+        }
+        arraydata.push(data)
+        console.log(arraydata);
+        numbertogether = ''
+
+        if (isNaN(phoneNumber.value) || phoneNumber.value <=12 ) {
+            alert('Input correct phone number')
+            return;
+        } 
+        else if(airtimeamount.value > currentBalance) {
+            alert("Insufficient funds. Your current balance is ₦" + currentBalance);
+    return;
+        } 
+  
+        updateBalance()
+        
+        // updateBalance()
+       
+
+
+    }
+</script>

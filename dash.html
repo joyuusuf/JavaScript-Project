@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <link rel="icon" href="Mide_Bank_PLC_transparent-removebg-preview.png">
+    <title>MB Dashboard</title>
+</head>
+<body>
+     <main>
+        <h4>Enjoy a glitch free banking network. Make transactions here! </h4>
+        <div id="container">
+            
+           
+            <div id="leftsidebar">
+                
+                    <h1 id="dashb">Dashboard</h1>
+                    <div id="underlogo">
+                        <button id="homebtn"> Transfer</button>
+                        <!-- <button id="withdraw">Withdraw Money</button> -->
+                        <!-- <button id="depo">Deposit</button> -->
+                        <button id="load">Airtime</button>
+                        <button id="signout">Sign Out </button>
+                        
+                    </div>
+                        
+                    <img id="logo" src="Mide_Bank_PLC_transparent-removebg-preview.png">
+
+            
+               
+
+            </div>
+
+            <div id="mainside">
+                <div id="mainleft">
+                <h1 id="greeting"></h1>
+
+               
+              </div>
+
+            </div>
+
+            <div id="rightsidebar ">
+                <img id="chart" src="small-business-loans-as-share-of-assets-2018-2-365x365-removebg-preview.png" alt="">
+            </div>
+        </div>
+     </main>
+
+
+     
+</body>
+</html>
+
+<script>
+    let network =document.getElementById('network')
+    let amount = document.getElementById('amount')
+    let pin =document.getElementById('pin')
+    let display=document.getElementById('display')
+    let phoneNumber=document.getElementById('phoneNumber')
+    let array =[]
+    let count=1
+
+  document.getElementById("greeting").innerHTML = getGreeting();
+function getGreeting() {
+    let hour = new Date().getHours();
+    let greeting;
+      
+    if (hour >= 5 && hour < 12) {
+        greeting = "Good morning!";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "Good afternoon!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    return greeting;
+    
+}
+
+
+
+
+load.addEventListener("click", ()=>{
+    localStorage.getItem("redirectedToairtime", "true")
+    window.location.href='airtime.html'
+})
+
+// function displaydata() {
+//     displaydata.innerHTML+=`
+//             <tbody>
+//                 <tr>
+//                         <td>${count}</td>
+//                         <td>${network}</td>
+//                         <td>${amount}</td>
+//                         <td>${pin}</td>
+//                 </tr>
+//             </tbody>
+//             `
+//             count++
+// }
+
+ 
+// function generate() {
+//     let numberTogether= ''
+//     for (let index = 0; index < 16; index++) {
+//         const element = array[index];
+//         let generatedNumber=Math.floor(Math.random()*10)
+//        numberTogether+= generatedNumber
+//     }
+//     pin.value=numberTogether
+    
+// }
+
+
+// function recharge() {
+//     displaydata()
+//     let data ={
+//         network:network.value,
+//         amount:amount.value,
+//         pin:pin.value
+//     }
+//     array.push(data)
+//     console.log(array);
+
+    
+// }
+</script>

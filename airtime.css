@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(159, 160, 165);
+  
+  }
+  #upperpart{
+    display: flex;
+    justify-content: center;
+    /* background-image: url(background3.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+    /* background-color: rgb(218, 96, 14); */
+    box-shadow: 0 0 10px rgba(248, 229, 229, 0.5);
+  }
+  #container {
+    margin-top: 300px;
+    max-width: 600px; 
+    margin: 0 auto;
+    /* background-color: green;  */
+    padding: 30px;
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(230, 233, 236, 0.1); */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  }
+  #container, #upperpart:hover{
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 15px 15px 15px rgba(237, 236, 240, 0.521);
+  }
+
+  
+  h1 {
+    text-align: center;
+    color: rgba(172, 231, 8, 0.705);
+    margin-bottom: 20px;
+  }
+
+  h4{
+    opacity: 0;
+    animation: fadeInOut 5s infinite;
+    text-align: center;
+}
+
+@keyframes fadeInOut{
+    0%, 100%{
+        opacity: 0;
+        color: rgb(6, 119, 119);
+    }
+    50%{
+        opacity: 1;
+        color:  white;
+    }
+}
+  
+  p {
+    font-size: 16px; 
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 700;
+    color: rgb(253, 253, 253);
+    cursor: pointer;
+  }
+  
+  .balance { 
+    font-size: 24px; 
+    color: #3498db; 
+    margin-bottom: 20px;
+  }
+  
+  button { 
+    background-color: #4e5961; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-right: 10px; 
+    
+  }
+  
+  button:hover { 
+    box-shadow: 0 0 10px rgba(230, 233, 236, 0.1);
+    background-color: #2980b9; 
+  }
+  
+  #rechargeopt{
+    display: flex;
+    justify-content: center;
+   gap: 10px;
+    margin-top: 20px;
+  }
+
+  #network, #amount{
+    color: #2980b9;
+    border: none;
+  }
+  option{
+    color: #2980b9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  #phoneNumber{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  td{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

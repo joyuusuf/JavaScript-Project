@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingpage.css">
+    
+    <title>MB Plc Landing page</title>
+</head>
+
+<body>
+    <main>
+        <div id="navbar">
+                 <img id="logo" src="Mide_Bank_PLC_transparent-removebg-preview.png">
+                    <ul id="navwords">
+                        <li>Personal</li>
+                        <li>Business</li>
+                        <li>Help & Support</li>
+                        <li>Search</li>
+                        <button id="loginnav">Login</button>
+                 <img src="arrow_drop_down_circle_FILL0_wght400_GRAD0_opsz24.png" alt="" id="dropdown">
+
+                    </ul>
+
+            <div id="middle">
+                    <h1 id="internet">Banking Services Beyond Excellence</h1>
+                    <h3 id="day">Day-to-day Banking at the click of a button</h3>
+            
+                    <div id="landbtn">
+                        <!-- <button id="landplog" onclick="gotoland()"> </button> -->
+                        <button id="landcreate" onclick="createacc()"> Get Started </button>
+                    </div>
+            </div> 
+        </div>
+
+        <div id="nextpage">
+                <h1 id="nextpg">Powerful, self-serve product and growth <br>
+                    analytics to help you save money</h1> 
+                <div >
+                   <video id="Videopopup" src="https://media.istockphoto.com/id/1486117185/video/bank-sign-on-glass-building-mirrored-sky-and-city-on-modern-facade-business-and-finance.mp4?s=mp4-640x640-is&k=20&c=nrzTDQsT3iP8frkV0fQ9d6SGNrZqFiY0UiRsL_2EW9g=" autoplay muted loop width="300" height="300"></video>
+                   
+                   <div id="nextlast">
+                    <span>What's new?</span> <span>Instant issue virtual cards</span>
+                   </div>
+                </div>
+                
+        </div>
+
+        <div id="thirdpage">
+            <h1 id="thirdh1">Choose when and how to pay vendors.</h1>
+            <p id="thirdp">Gain more control over your payment process. Schedule free ACH <br>
+                 bank transfers or pay by card, even where they aren’t accepted*— <br>
+                 your choice. There are no subscription fees and your vendors don’t <br>
+                  need to sign up.</p>
+        </div>
+ 
+
+
+        <footer>
+            <ul id="show">Show me more about</ul>
+            <ul id="credit">Credit cards</ul>
+            <ul id="home">Home loans</ul>
+            <ul id="personal">Personal loans</ul>
+            <ul id="travel">Travel</ul>
+        </footer>
+    </main> 
+</body>
+</html>
+<script>
+    
+    function gotoland(){
+        localStorage.setItem("redirectedToLogin", "true")
+        window.location.href = 'login.html'
+    } 
+
+
+    function createacc() { 
+        localStorage.setItem("redirectedToLogin", "true")
+        window.location.href = 'signup.html'
+    }
+    
+    // let firstVideo=document.getElementById('firstVideo')
+    // firstVideo.autoplay=true
+</script>
