@@ -1,12 +1,14 @@
+
 main{
-    background-color: white;
+    background-color: rgb(242, 243, 247);
+    /* height: 1000px; */
+
 }
 #navbar{
     background-color: white;
     border-top: 2px solid black;
     margin-top: 5px;
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-evenly;
 }
 #logo{
@@ -27,7 +29,6 @@ main{
 
 #navwords{
     display: flex;
-    /* flex-direction: row; */
     gap: 60px;
     position: absolute;
     top: 0;
@@ -36,7 +37,7 @@ main{
     color: bisque;
 }
 #loginnav{
-    background-color: rgb(8, 27, 8);
+    background-color: rgb(46, 16, 177);
     height: 30px;
     width: 50px;
     border: none;
@@ -52,14 +53,12 @@ main{
     transform: scale(1.1);
 }
 
-
-
-
-
 #middle{
     height: 90vh;
     width: 100%;
-    background-color: black;
+    /* background-image: url(Untitled\ design.jpg);
+    background-repeat: no-repeat; */
+    background-color: rgb(53, 6, 139);
     margin-top: 20px; 
 }
 
@@ -120,47 +119,101 @@ main{
 }
 
 #nextpage{
-    height: 70vh;
+    height: 90vh;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: black;
-    margin-top: 20px; 
+    background-color: rgb(12, 6, 97);
+    margin-top: 10px; 
     overflow: hidden;
+}
+#nxtpg{
+    display: flex;
+    align-items: center;
 }
 
 #nextpg{
+    text-align: center;
     color: white;
    font-family:'Arial Narrow Bold', sans-serif;
-    animation: moneyFlow 4s linear infinite; 
+    /* animation: moneyFlow 4s linear infinite;  */
+}
+ #rightnpg{
+    flex: 1; 
+ }
+#firstspan, #secdspan, #thrdspan{
+    border-radius: 10px;
+    height: 110px;
+    width: 480px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    margin:10px 0px 0px 20px;
+    opacity: 0;
+    animation: fadeInOut 5s infinite;
 }
 
-@keyframes moneyFlow {
+@keyframes fadeInOut{
+    0%, 100%{ color: rgb(148, 30, 245);
+        opacity: 0;
+    }
+    50%{ color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+}
+
+#firstspan{
+    transform: perspective(500px)
+    rotateY(30deg);
+}
+
+#thrdspan{
+    transform: perspective(500px)
+    rotateY(-20deg);
+    /* opacity: 0;
+    animation: fadeInOut 5s inifinite; */
+
+}
+.bankwiitMB{
+    color: white;
+    margin-left: 25px;
+}
+
+.ps{
+   color: white;
+   margin-left: 25px;
+
+}
+
+#image1{
+    width: 400px;
+    height: auto;
+}
+
+#pg2con{
+    background-color: white;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+#ptag{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: blue;
+
+}
+
+/* @keyframes moneyFlow {
     0% {
       transform: translateX(-100px);
     }
     100% {
       transform: translateX(300px);
     }
-  }
+  } */
  
 
-  #Videopopup{
-    position: relative;
-    bottom: -360px;
-    left: 0;
-    z-index: 9999;
-    animation: slideUp 3s ease forwards;
-  }
-
-  @keyframes slideUp{
-    from{
-        bottom: 360px;
-    }
-    to{
-        bottom: 0;
-    }
-  } 
+  
   #nextlast{
     display: flex;
     justify-content: center;
@@ -170,45 +223,119 @@ main{
     border-radius: 15px;
     gap: 10px;
   }
-  span{
+  /* span{
     color: white;
     border-radius: 6px;
     border: 1px solid rgb(255, 252, 252);
     height: 18px;
     cursor: pointer;
     
-  }
+  } */
 
  #thirdpage{
     display: block;
-    background-color: rgb(242, 242, 242);
-    height: 60vh;
+    background-color: rgb(230, 255, 41);
+    height: 100vh;
  }
 
- #thirdh1{
+ .thirdh1{
     font-size: 60px;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* color: blue; */
+ }
+ #fdMoney{
+    /* width: 400px; */
+    /* height: 600px; */
+    position: absolute;
+    left: 0;
+    top: 1;
  }
    
 
+ .thirdp{
+    position: absolute;
+    right: 0;
+    margin-right: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    /* color: white; */
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 100px;
+    width: 640px;
+    text-align: center;
+    /* background-color: black; */
+ }
+
+ .secondpt{
+    position: absolute;
+    right: 0;
+    margin: 120px 80px 0px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ #fdMoney2{
+    height: 300px;
+ }
+
+.textside{
+    height: 50vh;
+    background-color: purple;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    /* margin-top: 50px; */
+}
+
+.textbanking{
+    margin-left: 30px;
+    gap: 20px;
+}
+
+#textp2{
+    cursor: pointer;
+    margin-left: 30px;
+    gap: 20px;
+}
+#textp3{
+    margin-left: 30px;
+}
+#textp4{
+    margin-left: 30px;
+    gap: 20px;
+}
 
 
-#footer{
+footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 40px;
-    width: 1000px;
     height: 60px;
-    background-color: blanchedalmond;
+    /* width: 70%; */
+    background-color: rgb(14, 13, 13);
     font-weight: bold;
 }
 
+#show, #credit, 
+ #home, #personal, 
+ #travel{
+    width: 100%;
+    color: white;
+ }
  #show:hover, #credit:hover, 
  #home:hover, #personal:hover, 
  #travel:hover{
    cursor: pointer;
    color: chocolate;
+   /* width: 40%; */
 }
+ 
+
+
 
 @media screen and (max-width: 600px){
     body{
@@ -328,13 +455,16 @@ main{
      }
 
      #thirdpage{
-        width: 100%;
-        /* height: 100%; */
+        /* width: 100%; */
+        height: 100vh;
         background-color: #4e5961;
+        position: absolute;
+
      }
 
      #thirdh1{
         font-size: 20px;
+        margin-left: 400px; 
        
      }
 
@@ -342,6 +472,7 @@ main{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 10px;
         color: aliceblue;
+        margin-left: 400px; 
      }
 
     #footer{

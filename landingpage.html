@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="landingpage.css">
-    
+    <link rel="icon" href="Mide_Bank_PLC_transparent-removebg-preview.png">
     <title>MB Plc Landing page</title>
 </head>
 
 <body>
-    <main>
+    <!-- <main> -->
         <div id="navbar">
-                 <img id="logo" src="Mide_Bank_PLC_transparent-removebg-preview.png">
+                    <img id="logo" src="Mide_Bank_PLC_transparent-removebg-preview.png">
                     <ul id="navwords">
                         <li>Personal</li>
                         <li>Business</li>
                         <li>Help & Support</li>
                         <li>Search</li>
                         <button id="loginnav">Login</button>
-                 <img src="arrow_drop_down_circle_FILL0_wght400_GRAD0_opsz24.png" alt="" id="dropdown">
+                        <img src="arrow_drop_down_circle_FILL0_wght400_GRAD0_opsz24.png" alt="" id="dropdown">
 
                     </ul>
 
@@ -30,43 +30,80 @@
                         <!-- <button id="landplog" onclick="gotoland()"> </button> -->
                         <button id="landcreate" onclick="createacc()"> Get Started </button>
                     </div>
-            </div> 
+            </div>
+
         </div>
 
         <div id="nextpage">
-                <h1 id="nextpg">Powerful, self-serve product and growth <br>
-                    analytics to help you save money</h1> 
-                <div >
-                   <video id="Videopopup" src="https://media.istockphoto.com/id/1486117185/video/bank-sign-on-glass-building-mirrored-sky-and-city-on-modern-facade-business-and-finance.mp4?s=mp4-640x640-is&k=20&c=nrzTDQsT3iP8frkV0fQ9d6SGNrZqFiY0UiRsL_2EW9g=" autoplay muted loop width="300" height="300"></video>
-                   
-                   <div id="nextlast">
-                    <span>What's new?</span> <span>Instant issue virtual cards</span>
-                   </div>
-                </div>
-                
+            <h1 id="nextpg">Break free from <br> Unnecessary Charges</h1> 
+
+            <div id="nxtpg">
+                    <span id="rightnpg">
+                        <div id="firstspan">
+                            <b style="color: skyblue;">Other Banks</b>
+                            <p style="font-family: cursive; font-size: 13px;">You have been charged N50.00 for drinking water from the dispenser. Your remaining balance is  N950.00</p>
+                        </div>
+
+                        <div id="secdspan">
+                            <b style="color: skyblue;">Other Banks</b>
+                            <p style="font-family: cursive; font-size: 13px;">You have been charged N25.00 for using cashier pen, next time come with yours. Your remaining balance is  N1850.30</p>
+                        </div>
+
+                        <div id="thrdspan">
+                                    <b style="color: skyblue; text-align: center;"> MB Plc</b>
+                        <p style="font-family: cursive; font-size: 13px;">You have been credited N10,000.00 from a beneficiary <b style="color: black;">Akin Chioma.</b> Your remaining balance is 12,739.85 </p>
+                         
+                        </div>
+                        <p class="ps">PS: The only messages you should be getting </p>
+                        <h1 class="bankwiitMB">Bank with <b>MB Plc</b></h1>
+                    </span>
+                    
+                        <span id="pg2con"><img src="Flyer_design_holding-removebg-preview (1).png" id="image1">
+                             <p id="ptag">The top quality banking services.</p></span>
+            </div>
+                        
         </div>
 
         <div id="thirdpage">
-            <h1 id="thirdh1">Choose when and how to pay vendors.</h1>
-            <p id="thirdp">Gain more control over your payment process. Schedule free ACH <br>
-                 bank transfers or pay by card, even where they aren’t accepted*— <br>
-                 your choice. There are no subscription fees and your vendors don’t <br>
-                  need to sign up.</p>
+            <h1 class="thirdh1">Choose when and how to pay vendors.</h1>
+            <span><img src="Flyer_Design_Money-removebg-preview.png" id="fdMoney">
+                <p class="thirdp">Gain more control over your payment process. Schedule free ACH <br>
+                    bank transfers or pay by card, even where they aren’t accepted*— <br>
+                    your choice. There are no subscription fees and your vendors don’t <br>
+                     need to sign up.</p>
+                     <span class="secondpt"><h1>The <b style="color: blue;">Future</b> of <br> Banking Is Here</h1>
+                    <p>Banking experience has never been this easy before, start your journey now and see the difference.</p>
+
+                    <span><img src="Untitled design.jpg" id="fdMoney2"></span>
+                    </span>
+            </span>
+            
         </div>
+
+        <div class="textside">
+            <p class="textbanking">Banking at your convenience</p>
+            <h1 id="textp2">Do you want to experience banking from the comfort of your home, at work, or abroad?</h1>
+            <p id="textp3">A secure way to access your accounts, manage payments, check your statements, and much more, 24hours a day.</p>
+            <p id="textp4">The MB Plc Internet Banking launches you into a world without limits. It is a robust channel designed with state-of-the-art
+                    technology that gives you unlimited access to your accounts and allows you <br> conveniently perform over 90% of your bank transactions online in real-time</p>
+
+                    <img src="" alt="">
+        </div> 
  
 
 
-        <footer>
+        <footer id="">
             <ul id="show">Show me more about</ul>
             <ul id="credit">Credit cards</ul>
             <ul id="home">Home loans</ul>
             <ul id="personal">Personal loans</ul>
             <ul id="travel">Travel</ul>
         </footer>
-    </main> 
+    <!-- </main>  -->
 </body>
 </html>
 <script>
+
     
     function gotoland(){
         localStorage.setItem("redirectedToLogin", "true")
@@ -81,4 +118,7 @@
     
     // let firstVideo=document.getElementById('firstVideo')
     // firstVideo.autoplay=true
+
+    
+
 </script>
